@@ -5,24 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Rajdhani&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="whole-game">
-        <div class="background">
-            <img src="images/background.jpeg" alt="background">
-        </div>
-        <div class="header">
-            <h1>Rock Paper Scissors</h1>
-        </div>
-        <div class="battlefield">
-            <p>Player</p>
-            <p>VS</p>
-            <p>Computer</p>
-        </div>
-        <div class="player-choices">
-            <button>Fire</button>
-            <button>Water</button>
-            <button>Grass</button>
+    <div class="background">
+        <img src="images/background.JPG" alt="background">
+    </div>
+    <main class="game-container">
+        <div class="whole-game">
+            <div class="header">
+                <h1>Rock Paper Scissors</h1>
+            </div>
+            <div class="battlefield">
+                <div class="player-battle">
+                    <img src="images/block.webp" alt="stage" class="block-stage">
+                    <p class="player">Player :</p>
+                </div>
+                <div class="middle">
+                    <p>VS</p>
+                </div>
+                <div class="computer-battle">
+                    <img src="images/block.webp" alt="stage" class="block-stage">
+                    <p class="computer">Computer :</p>
+                </div>
+            </div>
+            <div class="player-choices">
+                <div class="mini-title">
+                    <p>Choose your pokemon!</p>
+                </div>
+                <button>Fire</button>
+                <button>Water</button>
+                <button>Grass</button>
+            </div>
         </div>
     </main>
     <script src="main.js"></script>
