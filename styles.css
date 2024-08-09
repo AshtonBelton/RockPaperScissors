@@ -31,13 +31,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.battlefield {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    margin-bottom: 20px;
-}
-
 .header h1 {
     font-family: "Rajdhani", sans-serif;
     font-weight: 700;
@@ -45,6 +38,20 @@
     font-size: 3rem;
     text-align: center;
     margin-bottom: 20px;
+    border-bottom: 3px solid;
+}
+
+.battlefield {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    height: 300px;
+    position: relative;
+}
+
+.player-battle, .computer-battle {
+    position: relative;
 }
 
 .block-stage {
@@ -56,7 +63,7 @@
 .middle p {
     font-size: 2rem;
     font-weight: bold;
-    display: flex;
+    margin-bottom: 75px;
 }
 
 .player-choices {
@@ -79,4 +86,18 @@
 
 .player-choices button:hover {
     background-color: #ddd;
+}
+
+#mario {
+    background-color: red;
+    color: white;
+}
+
+#peach {
+    background-color: #a21caf;
+    color: white;
+}
+
+#bowser {
+    background-color: yellow;
 }
