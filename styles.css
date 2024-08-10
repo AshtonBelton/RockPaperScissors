@@ -61,9 +61,10 @@
 }
 
 .middle p {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 75px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .player-choices {
@@ -81,23 +82,29 @@
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Great addition to the buttons to give them effects */
 }
 
-.player-choices button:hover {
-    background-color: #ddd;
+.player-choices button:hover { /* Adds the effects from transition to the buttons */
+    background-color: #bbb;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.character-choice {
+    position: relative;
+    width: 150px;
+    top: 50px;
 }
 
 #mario {
     background-color: red;
-    color: white;
 }
 
 #peach {
-    background-color: #a21caf;
-    color: white;
+    background-color: #e879f9;
 }
 
 #bowser {
-    background-color: yellow;
+    background-color: #ffcc00;
 }
