@@ -92,9 +92,12 @@
 }
 
 .character-choice {
-    position: relative;
-    width: 150px;
-    top: 50px;
+    position: absolute;
+    width: 100px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
 #mario {

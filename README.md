@@ -1,5 +1,8 @@
 # RockPaperScissors
 
+I do not own any of these photos that are being used in the project. The project is for practice and learning purpose only.
+
+Credits to the owners of the images.
 Links to images I used:
 
 Characters:

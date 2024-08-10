@@ -1,12 +1,13 @@
 const title = document.querySelector(".title");
 const battlefield = document.querySelector(".battlefield");
-const blockStage = document.querySelector(".block-stage");
+const blockStagePlayer = document.querySelector(".block-stage-player");
 
 const playerBattle = document.querySelector(".player-battle");
 const playerPoint = document.querySelector(".player")
 
 const computerBattle = document.querySelector(".computer-battle");
 const computerPoint = document.querySelector(".computer");
+const blockStageComputer = document.querySelector(".block-stage-computer");
 
 const playerChoices = document.querySelector(".player-choices");
 const characters = document.querySelector(".characters");
@@ -78,7 +79,7 @@ function playGame() {
 characters.onclick = (event) => {
     const buttonClicked = event.target.getAttribute("id");
     const humanCharacter = buttonClicked;
-    const computerCharacter = getComputerChoice;
+    const computerCharacter = getComputerChoice();
 
     const playerImgChoice = document.createElement("img");
     playerImgChoice.src = `./images/${buttonClicked}.png`;
@@ -88,6 +89,14 @@ characters.onclick = (event) => {
     playerImgChoice.src = `./images/${computerCharacter}.png`;
     playerImgChoice.setAttribute("class", "character-choice");
 
+    if (blockStagePlayer.childElementCount == 1) {
+        blockStagePlayer.insertBefore(playerImgChoice, blockStagePlayer.firstchild);
+        blockStageComputer.insertBefore(computerImgChoice, blockStageComputer.firstChild);
+    } else {
+        blockStagePlayer.replaceChild(playerImgChoice, blockStagePlayer.firstChild);
+        blockStageComputer.replaceChild(computerImgChoice, blockStageComputer.firstChild);
+    }
 
+    playRound(humanCharacter, computerCharacter);
 }
 
