@@ -1,4 +1,5 @@
 # RockPaperScissors
+This was my own take on a customized game of rock, paper, scissors mario edition.
 
 I do not own any of these photos that are being used in the project. The project is for practice and learning purpose only.
 

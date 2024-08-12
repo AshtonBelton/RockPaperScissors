@@ -50,6 +50,8 @@
     position: relative;
 }
 
+/* Within the game container */
+
 .player-battle, .computer-battle {
     position: relative;
 }

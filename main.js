@@ -62,35 +62,13 @@ function playRound(humanChoice, computerChoice) {
 function declareFinalWinner() {
     characters.style.pointerEvents = "none";
     if (humanScore > computerScore) {
-        final.textContent = "Congratulations! You win the game!";
+        final.textContent = "Congratulations! You won the game!";
     } else if (computerScore > humanScore) {
         final.textContent = "Game Over! The computer wins the game!";
     } else {
         final.textContent = "It's a draw! No one wins the game!";
     }
 }
-
-/*function playGame() {
-    humanScore = 0;
-    computerScore = 0;
-
-    for (let i = 0; i < 5; i++) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-
-        playRound(humanChoice, computerChoice);
-    }
-
-    finalResult.textContent = `Final Score - Human: ${humanScore}, Computer: ${computerScore}`;
-    
-    if (humanScore > computerScore) {
-        final.textContent = "You won the game!";
-    } else if (computerScore > humanScore) {
-        final.textContent = "You lost the game!";
-    } else {
-        final.textContent = "Draw! No one wins!";
-    }
-}*/
 
 characters.onclick = (event) => {
     const buttonClicked = event.target.getAttribute("id");
@@ -104,16 +82,6 @@ characters.onclick = (event) => {
     const computerImgChoice = document.createElement("img");
     computerImgChoice.src = `./images/${computerCharacter}.png`;
     computerImgChoice.setAttribute("class", `character-choice ${computerCharacter}`);
-
-    /*
-    if (blockStagePlayer.childElementCount == 1) {
-        blockStagePlayer.insertBefore(playerImgChoice, blockStagePlayer.firstchild);
-        blockStageComputer.insertBefore(computerImgChoice, blockStageComputer.firstChild);
-    } else {
-        blockStagePlayer.replaceChild(playerImgChoice, blockStagePlayer.firstChild);
-        blockStageComputer.replaceChild(computerImgChoice, blockStageComputer.firstChild);
-    }
-    */
 
     if (blockStagePlayer.childElementCount == 1) {
         blockStagePlayer.appendChild(playerImgChoice);
